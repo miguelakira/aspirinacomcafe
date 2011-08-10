@@ -1,0 +1,5 @@
+<% content_for :reviews %>
+<% @reviews.each do |post| %>
+	<%= raw(post.title) %>
+
+<% end %>
