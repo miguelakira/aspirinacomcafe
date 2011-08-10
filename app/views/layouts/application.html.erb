@@ -9,6 +9,10 @@
   <script type="text/javascript" src="/javascripts/jquery.js"></script>
   <script type="text/javascript" src="/javascripts/easySlider1.5.js"></script>
  
+  <!-- typekit.com -->
+  <script type="text/javascript" src="http://use.typekit.com/htl1brm.js"></script>
+  <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
+
   <script type="text/javascript" charset="utf-8">
   // <![CDATA[
   $(document).ready(function(){ 
@@ -43,7 +47,7 @@
 <div class="main">
   <div class="blok_header">
     <div class="header">
-      <div class="logo"><a href="index.html"><img src="/images/logo.gif" width="264" height="102" border="0" alt="logo" /></a></div>
+      
       <div class="menu">
         <ul>
           <li><a href="index.html" class="active"><span>Início</span></a></li>
@@ -62,9 +66,10 @@
     <div class="header_text">
       <div class="div">
         <div class="left1">
-          <h2><strong>Aspirina <br />
-            com Café</strong></h2>
-          <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium mque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae </p>
+          <div class = "aspirina">
+          </div>
+          
+          <p> Gadgets, Tecnologia, Programação e Cafeína</p>
           <div class="clr"></div>
           <p><a href="#"><img src="/images/more_information.gif" alt="picture" width="127" height="48" border="0" /></a></p>
         </div>
@@ -92,14 +97,8 @@
             </div>
           </div>
           <div class="body_big">
-            <h2>Welcome to Our Website<br />
-              <span>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor </span></h2>
-            <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium mque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-            <img src="/images/img_1.jpg" alt="picture" width="180" height="178" class="floated" />
-            <p><strong>Suspendisse adipiscing rhoncus massa, sit amet <br />
-              sollicitudin quam vulputate non. In non turpis nisl. </strong></p>
-            <p>Curabitur purus mi, pharetra vitae viverra et, mattis sit amet nunc. Quisque enim ipsum, convallis sit amet molestie in, placerat vel urna. Praesent congue auctor elit, nec pretium ipsum volutpat vitae. Vivamus eget ipsum sit amet ipsum tincidunt fermentum.</p>
-            <p><a href="#">Continue Reading »</a></p>
+            <%= yield%>
+            
             <div class="clr"></div>
           </div>
           <div class="clr"></div>
@@ -111,8 +110,8 @@
 </div>
 <div class="footer">
   <div class="footer_resize">
-    <p class="leftt">© Copyright YourSiteName. All Rights Reserved<br />
-      <a href="#">Home</a> | <a href="#">Contact</a> | <a href="#">RSS </a></p>
+    <p class="leftt">© Copyright Aspirina com Café. Todos os Direitos Reservados.<br />
+      <a href="#">Início</a> | <a href="#">Contato</a> | <a href="#">RSS </a></p>
     <p class="rightt">(DT) <a href="http://www.dreamtemplate.com"><strong>Website Templates</strong></a></p>
     <div class="clr"></div>
   </div>
