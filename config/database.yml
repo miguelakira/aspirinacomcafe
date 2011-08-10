@@ -5,6 +5,7 @@ development:
   database: aspirinacomcafe
   user: root
   password: ar4nhas
+  encoding: utf8
   pool: 5
   timeout: 5000
 
@@ -17,6 +18,7 @@ test:
   user: root
   password: ar4nhas
   pool: 5
+  encoding: utf8
   timeout: 5000
 
 production:
@@ -24,5 +26,6 @@ production:
   database: aspirinacomcafe_production
   user: root
   password: root
+  encoding: utf8
   pool: 5
   timeout: 5000

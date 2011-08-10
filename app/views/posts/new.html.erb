@@ -1,2 +1,13 @@
-<h1>Posts#new</h1>
-<p>Find me in app/views/posts/new.html.erb</p>
+<%= javascript_include_tag 'tiny_mce/tiny_mce.js' %>
+<% javascript_tag do %>
+	tinyMCE.init({
+		mode : "textareas", theme : "simple"
+		});
+	
+
+<% end %>
+<h1>Novo post</h1>
+
+<%= render 'form' %>
+
+<%= link_to 'Voltar', posts_path %>
