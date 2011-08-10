@@ -1,6 +1,17 @@
 class PostsController < ApplicationController
   def index
   	@posts = Post.all( :conditions => { :published => true } )
+    @reviews = @posts
+    @reviews.each do |review|
+      title_array = review.title.split(" ")
+      title_array = title_array[2, title_array.count]
+      review.title = title_array.join(" ")
+    end
+  end
+
+  def reviews
+    
+    
   end
 
   def edit
@@ -11,6 +22,9 @@ class PostsController < ApplicationController
   end
 
   def delete
+  end
+
+  def show
   end
 
   def create
@@ -26,10 +40,4 @@ class PostsController < ApplicationController
     end
   end
 
-  def show
-  end
-  
-  def news
-  	@news = Post.all.last(5).reverse
-  end
 end

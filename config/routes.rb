@@ -1,5 +1,10 @@
 Aspirinacomcafe::Application.routes.draw do
-  resources :posts
+  get "reviews/index"
+
+  resources :posts, :controller => :posts, :action => :reviews
+    
+
+
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
