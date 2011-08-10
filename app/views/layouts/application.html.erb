@@ -1,14 +1,121 @@
-<!DOCTYPE html>
-<html>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
 <head>
-  <title>Aspirinacomcafe</title>
+  <title>Aspirina com Café</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
   <%= stylesheet_link_tag :all %>
   <%= javascript_include_tag :defaults %>
-  <%= csrf_meta_tag %>
+      
+  <script type="text/javascript" src="/javascripts/jquery.js"></script>
+  <script type="text/javascript" src="/javascripts/easySlider1.5.js"></script>
+ 
+  <script type="text/javascript" charset="utf-8">
+  // <![CDATA[
+  $(document).ready(function(){ 
+    $("#slider").easySlider({
+      controlsBefore: '<p id="controls">',
+      controlsAfter:  '</p>',
+      auto: true, 
+      continuous: true
+    }); 
+  });
+  // ]]>
+  </script>
+  <style type="text/css">
+  .gallery { float:right; width:319px; height:202px; margin:68px 136px 0 0 !important; margin:68px 68px 0 0; }
+  #slider { margin:0; padding:0; list-style:none; }
+  #slider ul,
+  #slider li { margin:0; padding:0; list-style:none; }
+  /* 
+      define width and height of list item (slide)
+      entire slider area will adjust according to the parameters provided here
+  */
+  #slider li { width:319px; height:202px; overflow:hidden; }
+  p#controls { margin:0; padding:0; position:relative; }
+  #prevBtn { display:block; margin:0; overflow:hidden; width:1px; height:1px; position:absolute; left:-34px; top:-133px; }
+  #nextBtn { display:block; margin:0; overflow:hidden; width:1px; height:1px; position:absolute; left: 398px; top:-133px; }
+  #prevBtn a { display:block; width:1px; height:1px; background:url(/images/spacer.gif) no-repeat 0 0; }
+  #nextBtn a { display:block; width:1px; height:1px; background:url(/images/spacer.gif) no-repeat 0 0; }
+  </style>
 </head>
+
 <body>
-
-<%= yield %>
-
+<div class="main">
+  <div class="blok_header">
+    <div class="header">
+      <div class="logo"><a href="index.html"><img src="/images/logo.gif" width="264" height="102" border="0" alt="logo" /></a></div>
+      <div class="menu">
+        <ul>
+          <li><a href="index.html" class="active"><span>Início</span></a></li>
+          <li><a href="about.html"><span>Artigos</span></a></li>
+          <li><a href="services.html"><span>Reviews</span></a></li>
+          <li><a href="services.html"><span>Quem Sou</span></a></li>
+          <li><a href="contact.html"><span>Contato</span></a></li>
+        </ul>
+      </div>
+      <div class="clr"></div>
+    </div>
+    <div class="clr"></div>
+  </div>
+  <div class="clr"></div>
+  <div class="header_text_bg">
+    <div class="header_text">
+      <div class="div">
+        <div class="left1">
+          <h2><strong>Aspirina <br />
+            com Café</strong></h2>
+          <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium mque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae </p>
+          <div class="clr"></div>
+          <p><a href="#"><img src="/images/more_information.gif" alt="picture" width="127" height="48" border="0" /></a></p>
+        </div>
+      </div>
+      <div class="gallery">
+        <div id="slider">
+          <ul>
+            <li><img src="/images/simple_img_1.jpg" alt="screen 1" width="319" height="202" border="0"  /></li>
+            <li><img src="/images/simple_img_2.jpg" alt="screen 1" width="319" height="202" border="0"  /></li>
+            <li><img src="/images/simple_img_3.jpg" alt="screen 1" width="319" height="202" border="0"  /></li>
+          </ul>
+        </div>
+      </div>
+      <div class="clr"></div>
+    </div>
+  </div>
+  
+  <div class="body_resize">
+    <div class="body_top">
+      <div class="body_bottom">
+        <div class="body">
+          <div class="body_small">
+            <div class="body_small_bg">
+              <% yield( :news )%>
+            </div>
+          </div>
+          <div class="body_big">
+            <h2>Welcome to Our Website<br />
+              <span>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor </span></h2>
+            <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium mque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+            <img src="/images/img_1.jpg" alt="picture" width="180" height="178" class="floated" />
+            <p><strong>Suspendisse adipiscing rhoncus massa, sit amet <br />
+              sollicitudin quam vulputate non. In non turpis nisl. </strong></p>
+            <p>Curabitur purus mi, pharetra vitae viverra et, mattis sit amet nunc. Quisque enim ipsum, convallis sit amet molestie in, placerat vel urna. Praesent congue auctor elit, nec pretium ipsum volutpat vitae. Vivamus eget ipsum sit amet ipsum tincidunt fermentum.</p>
+            <p><a href="#">Continue Reading »</a></p>
+            <div class="clr"></div>
+          </div>
+          <div class="clr"></div>
+        </div>
+      </div>
+    </div>
+    <div class="clr"></div>
+  </div>
+</div>
+<div class="footer">
+  <div class="footer_resize">
+    <p class="leftt">© Copyright YourSiteName. All Rights Reserved<br />
+      <a href="#">Home</a> | <a href="#">Contact</a> | <a href="#">RSS </a></p>
+    <p class="rightt">(DT) <a href="http://www.dreamtemplate.com"><strong>Website Templates</strong></a></p>
+    <div class="clr"></div>
+  </div>
+</div>
 </body>
 </html>
