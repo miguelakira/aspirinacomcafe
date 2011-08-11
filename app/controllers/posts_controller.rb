@@ -17,11 +17,12 @@ before_filter :reviews
 
   def reviews
     @reviews = Post.all( :conditions => { :published => true } )
-    @reviews.each do |review|
+    @reviews.each do |review| unless @reviews.nil?
       title_array = review.title.split(" ")
       title_array = title_array[2, title_array.count]
       review.title = title_array.join(" ")
-    end
+  end  
+  end
   end
 
   def edit
