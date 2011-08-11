@@ -4,15 +4,14 @@
 	<h2><%= raw( post.title ) %></h2>
 	<h2><span><%= raw( post.description ) %></span></h2><br />
 	<div class = 'post'><%= raw( post.intro ) %></div>
+	<p><a href="#">Ler Mais »</a></p>
+	<div class="clr"></div>
 <% end %>
+           
             
             
-            
-            <p><a href="#">Ler Mais »</a></p>
 
-<% @posts.each do |post| %>
-	<%= raw(post.title) %>
 
-<% end %>
+
             <%= link_to 'Novo Post', new_post_path %>
 

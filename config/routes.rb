@@ -1,7 +1,9 @@
 Aspirinacomcafe::Application.routes.draw do
   get "reviews/index"
+  get "posts/reviews"
+  resources :posts
 
-  resources :posts, :controller => :posts, :action => :reviews
+
     
 
 
