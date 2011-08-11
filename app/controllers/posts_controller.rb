@@ -19,9 +19,9 @@ before_filter :reviews
     @reviews = Post.all( :conditions => { :published => true } )
     @reviews.each do |review| unless @reviews.nil?
       unless review.nil?
-        title_array = review.title.split(" ")
-        title_array = title_array[2, title_array.count]
-        review.title = title_array.join(" ")
+        #title_array = review.title.split(" ")
+        #title_array = title_array[2, title_array.count]
+        #review.title = title_array.join(" ")
       end
   end  
   end
