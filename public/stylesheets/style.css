@@ -13,8 +13,8 @@ a:hover { text-decoration:underline;}
 .logo { padding:0; margin:0; width:264px; float:left;}
 .aspirina {
 	background: url(/../images/logo.png) left no-repeat;
-	height:100px;
-	width:340px;
+	height:186px;
+	width:500px;
 	
 		;}
 /* menu */	
@@ -35,7 +35,7 @@ a:hover { text-decoration:underline;}
 .header_text2 { height:154px; margin:0 auto; padding:0; width:985px; background:  url(/../images/header_text_bg_main2.gif) top center no-repeat;}
 .header_text2 img { float:right; padding:53px 50px 0 0; margin:0;}
 .header_text2 h2 { font: bold 36px droid-sans, Helvetica, sans-serif; color:#fff; padding:53px 0 0 57px; margin:0;}
-.header_text .div .left1 { float:left; width:380px; padding:65px 0 0 50px; margin:0; }
+.header_text .div .left1 { float:left; width:380px; padding:0px 0 0 20px; margin:0; }
 .header_text .div .left1 img { margin:0 5px; padding:0;}
 .header_text .div .left1 h2 {font:normal 36px droid-sans, Helvetica, sans-serif; color:#fefefe; padding:10px 0 0 0; margin:0; border:0;}
 .header_text p { font:normal 13px droid-sans, Helvetica, sans-serif; color:#fff6f6; padding:20px 0 0 0; margin:0; line-height:1.8em;}
