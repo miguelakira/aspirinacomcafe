@@ -1,0 +1,121 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>contact</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<link href="style.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="js/jquery.js"></script>
+<script type="text/javascript">
+// <![CDATA[
+jQuery(document).ready(function(){
+	$('#contactform').submit(function(){				  
+		var action = $(this).attr('action');
+		$.post(action, { 
+			name: $('#name').val(),
+			email: $('#email').val(),
+			company: $('#company').val(),
+			subject: $('#subject').val(),
+			message: $('#message').val()
+		},
+			function(data){
+				$('#contactform #submit').attr('disabled','');
+				$('.response').remove();
+				$('#contactform').before('<p class="response">'+data+'</p>');
+				$('.response').slideDown();
+				if(data=='Message sent!') $('#contactform').slideUp();
+			}
+		); 
+		return false;
+	});
+});
+// ]]>
+</script>
+</head>
+<body>
+<div class="main">
+  <div class="header">
+    <div class="block_header">
+      <div class="logo"><a href="index.html"><img src="images/logo.gif" width="331" height="143" border="0" alt="logo" /></a></div>
+      <div class="menu">
+        <ul>
+          <li><a href="index.html"><span>Home</span></a></li>
+          <li><a href="services.html"><span>About us</span></a></li>
+          <li><a href="services.html"><span>Services</span></a></li>
+          <li><a href="portfolio.html"><span>Portfolio</span></a></li>
+          <li><a href="contact.html"><span>Contact us</span></a></li>
+        </ul>
+      </div>
+      <div class="clr"></div>
+    </div>
+  </div>
+  <div class="title_page">
+    <div class="topi2">
+      <h2><span>Lorem Ipsum is simply dummy text </span>of the printing and <br />
+        typesetting industry... </h2>
+      <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Has been the industry's standard dummy text ever since the when an unknown printer took a galley <a href="#">[...] </a></p>
+      <div class="clr"></div>
+    </div>
+  </div>
+  <div class="body">
+    <div class="body_resize">
+      <div class="Portfolio">
+        <h2>Contact us</h2>
+        <p>Lorem Ipsum is simply dummy text of the printing andtypesetting industry. <br />
+          Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type </p>
+        <form action="contact.php" method="post" id="contactform">
+          <ol>
+            <li>
+              <label for="name">your name <span class="red">*</span></label>
+              <input id="name" name="name" class="text" />
+            </li>
+            <li>
+              <label for="email">Your email <span class="red">*</span></label>
+              <input id="email" name="email" class="text" />
+            </li>
+            <li>
+              <label for="company">Company Name</label>
+              <input id="company" name="company" class="text" />
+            </li>
+            <li>
+              <label for="subject">Subject</label>
+              <input id="subject" name="subject" class="text" />
+            </li>
+            <li>
+              <label for="message">Message <span class="red">*</span></label>
+              <textarea id="message" name="message" rows="6" cols="50"></textarea>
+            </li>
+            <li class="buttons">
+              <input type="image" name="imageField" id="imageField" src="images/send.gif" />
+            </li>
+          </ol>
+        </form>
+        <p>&nbsp;</p>
+      </div>
+      <div class="Sub">
+        <h2>Get in touch</h2>
+        <p class="color">Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. </p>
+        <p class="color"><span>Tel:</span> +123456789<br />
+          <span> Fax:</span> +123456789<br />
+          <span> Email:</span> company@domainname.com </p>
+        <p class="color">&nbsp;</p>
+        <h2>Testimonials</h2>
+        <p class="color">“It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. Content here, content here', making it look like readable English.”</p>
+        <p class="color"><strong>-John Smith, webdesigner</strong> </p>
+      </div>
+      <div class="clr"></div>
+    </div>
+    <div class="clr"></div>
+  </div>
+  <div class="footer">
+    <div class="resize">
+      <div>
+        <p class="footer_logo"><a href="#"><img src="images/twitter.gif" width="80" height="15" border="0" alt="RSS" /></a></p>
+        <p>Copyright © Sitename.com. <a href="http://dreamtemplate.com/">dreamtemplate.com</a>. All Rights Reserved<br />
+          <a href="index.html">Home</a> | <a href="contact.html">Contact</a> | <a href="blog.html">RSS</a></p>
+      </div>
+    </div>
+    <p class="clr"></p>
+  </div>
+</div>
+</body>
+</html>

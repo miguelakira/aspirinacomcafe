@@ -1,7 +1,8 @@
 <% content_for :reviews %>
 <% @reviews.each do |post| unless @reviews.nil?%>
 
-	<p><%= raw(post.title) %></p>
+	<p><span><%= raw(post.title) %></span></p>
+	
 	
 <%end%>	
 	
